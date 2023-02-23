@@ -144,6 +144,10 @@ async def pm_spoll_choker(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
+     btn = [[
+               InlineKeyboardButton(' ɢᴏᴏɢʟᴇ ', url=f"https://google.com/search?q={search}"),
+               InlineKeyboardButton('ɪᴍᴅʙ', url=f"https://imdb.com/find?q={search}")
+        ]]           
         k = await msg.reply("I couldn't find any movie in that name.", reply_markup=InlineKeyboardMarkup(btn))
         await asyncio.sleep(8)
         await k.delete()
