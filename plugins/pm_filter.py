@@ -110,7 +110,7 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
             **locals()
         )
     else:
-        cap = f"Here is what i found for your query\n\n🎞️Movie name ☛ `{search}`\n\n🎯Requested by ☛ {user}\n\n This message will be AUTO-DELETED after 5 minutes"
+        cap = f"Here is what i found for your query\n\nMovie name ☛ `{search}`\nRequested by ☛ {user}\nThis message will be AUTO-DELETED after 5 minutes"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
@@ -181,7 +181,7 @@ async def pm_spoll_choker(msg):
         return
     temp.PM_SPELL_CHECK[msg.id] = movielist
     btn = [[InlineKeyboardButton(text=movie.strip(), callback_data=f"pmspolling#{user}#{k}")] for k, movie in enumerate(movielist)]
-    btn.append([InlineKeyboardButton(text="Close", callback_data=f'pmspolling#{user}#close_spellcheck')])
+    btn.append([InlineKeyboardButton(text="🚫Close🚫", callback_data=f'pmspolling#{user}#close_spellcheck')])
     await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?", reply_markup=InlineKeyboardMarkup(btn), reply_to_message_id=msg.id)
 
 
