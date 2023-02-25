@@ -91,9 +91,9 @@ class script(object):
 
     AM_IMDB = """Help: <b>IMDB</b>
 
-<b>Commands and Usage:</b>
-• /imdb  - <code>ɢᴇᴛ ᴛʜᴇ ꜰɪʟᴍ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ꜰʀᴏᴍ ɪᴍᴅʙ ꜱᴏᴜʀᴄᴇ.</code>
-• /search  - <code>ɢᴇᴛ ᴛʜᴇ ꜰɪʟᴍ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ꜰʀᴏᴍ ᴠᴀʀɪᴏᴜꜱ ꜱᴏᴜʀᴄᴇꜱ.</code>
+<b>Commands and Usage:</b>• /imdb  - <code>get the film information from IMDb source.</code>
+
+• /search  - <code>get the film information from various sources.</code>
 """
 
     AM_MISC = """Help: <b>User Info</b>
