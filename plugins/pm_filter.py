@@ -173,11 +173,12 @@ async def pm_spoll_choker(msg):
                 movielist += [movie.get('title') for movie in imdb_s]
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
-    if not movielist:
-        k = await msg.reply("I couldn't find anything related to that. Check your spelling", reply_markup=InlineKeyboardMarkup(btn2))
+
 btn2 = [[
             InlineKeyboardButton(' ɢᴏᴏɢʟᴇ ', url=f"https://google.com/search?q={search}")
-        ]]           
+        ]]
+    if not movielist:
+        k = await msg.reply("I couldn't find anything related to that. Check your spelling", reply_markup=InlineKeyboardMarkup(btn2))           
         await asyncio.sleep(8)
         await k.delete()
         return
