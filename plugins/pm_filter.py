@@ -110,7 +110,7 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
             **locals()
         )
     else:
-        cap = f"Here is what i found for your query\n\nMovie name ☛ `{search}`\nRequested by ☛ \nThis message will be AUTO-DELETED after 5 minutes"
+        cap = f"Hᴇʀᴇ ɪs ᴡʜᴀᴛ ɪ ғᴏᴜɴᴅ ғᴏʀ ʏᴏᴜʀ ǫᴜᴇʀʏ\n\n🎞️Mᴏᴠɪᴇ ɴᴀᴍᴇ ☛`{search}`\nNOTE ‣ Tʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ Aᴜᴛᴏ-Dᴇʟᴇᴛᴇ ᴀғᴛᴇʀ 𝟻 ᴍɪɴᴜᴛᴇs"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
@@ -175,14 +175,14 @@ async def pm_spoll_choker(msg):
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
 
     if not movielist:
-        k = await msg.reply("I couldn't find anything related to that. Check your spelling")           
+        k = await msg.reply("I ᴄᴏᴜʟᴅɴ'ᴛ ғɪɴᴅ ᴀɴʏᴛʜɪɴɢ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴀᴛ. Cʜᴇᴄᴋ ʏᴏᴜʀ sᴘᴇʟʟɪɴɢ")           
         await asyncio.sleep(8)
         await k.delete()
         return
     temp.PM_SPELL_CHECK[msg.id] = movielist
     btn = [[InlineKeyboardButton(text=movie.strip(), callback_data=f"pmspolling#{user}#{k}")] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="🚫Close🚫", callback_data=f'pmspolling#{user}#close_spellcheck')])
-    await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?", reply_markup=InlineKeyboardMarkup(btn), reply_to_message_id=msg.id)
+    await msg.reply("I ᴄᴏᴜʟᴅɴ'ᴛ ғɪɴᴅ ᴀɴʏᴛʜɪɴɢ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ᴛʜᴀᴛ\nDɪᴅ ʏᴏᴜ ᴍᴇᴀɴ ᴀɴʏ ᴏɴᴇ ᴏғ ᴛʜᴇsᴇ?", reply_markup=InlineKeyboardMarkup(btn), reply_to_message_id=msg.id)
 
 
 
