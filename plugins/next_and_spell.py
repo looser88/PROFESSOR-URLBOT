@@ -58,6 +58,46 @@ async def next_page(bot, query):
         else:
             btn = [[InlineKeyboardButton(text=f"{file.file_name}", callback_data=f'files#{nxreq}#{file.file_id}'),
                     InlineKeyboardButton(text=f"{get_size(file.file_size)}", callback_data=f'files#{nxreq}#{file.file_id}')] for file in files ]
+    try:
+        if settings['auto_delete']:
+            btn.insert(0, 
+                [
+                    InlineKeyboardButton('ɪᴍᴅʙ', url=f"https://imdb.com/find?q={search}"),
+                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
+                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                ]
+            )
+
+        else:
+            btn.insert(0, 
+                [
+                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
+                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo'),
+                    InlineKeyboardButton('ɪᴍᴅʙ', url=f"https://imdb.com/find?q={search}")
+                ]
+            )
+                
+    except KeyError:
+        grpid = await active_connection(str(message.from_user.id))
+        await save_group_settings(grpid, 'auto_delete', True)
+        settings = await get_settings(message.chat.id)
+        if settings['auto_delete']:
+            btn.insert(0, 
+                [
+                    InlineKeyboardButton('ɪᴍᴅʙ', url=f"https://imdb.com/find?q={search}"),
+                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
+                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                ]
+            )
+
+        else:
+            btn.insert(0, 
+                [
+                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
+                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo'),
+                    InlineKeyboardButton('ɪᴍᴅʙ', url=f"https://imdb.com/find?q={search}")
+                ]
+            )
 
     if 0 < offset <= 10:
         off_set = 0
@@ -148,6 +188,46 @@ async def pm_next_page(bot, query):
         else:
             btn = [[InlineKeyboardButton(text=f"{file.file_name}", callback_data=f'pmfile#{file.file_id}'),
                     InlineKeyboardButton(text=f"{get_size(file.file_size)}", callback_data=f'pmfile#{file.file_id}')] for file in files ]
+    try:
+        if settings['auto_delete']:
+            btn.insert(0, 
+                [
+                    InlineKeyboardButton('ɪᴍᴅʙ', url=f"https://imdb.com/find?q={search}"),
+                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
+                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                ]
+            )
+
+        else:
+            btn.insert(0, 
+                [
+                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
+                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo'),
+                    InlineKeyboardButton('ɪᴍᴅʙ', url=f"https://imdb.com/find?q={search}")
+                ]
+            )
+                
+    except KeyError:
+        grpid = await active_connection(str(message.from_user.id))
+        await save_group_settings(grpid, 'auto_delete', True)
+        settings = await get_settings(message.chat.id)
+        if settings['auto_delete']:
+            btn.insert(0, 
+                [
+                    InlineKeyboardButton('ɪᴍᴅʙ', url=f"https://imdb.com/find?q={search}"),
+                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
+                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                ]
+            )
+
+        else:
+            btn.insert(0, 
+                [
+                    InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
+                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo'),
+                    InlineKeyboardButton('ɪᴍᴅʙ', url=f"https://imdb.com/find?q={search}")
+                ]
+            )
 
     if 0 < offset <= 10:
         off_set = 0
