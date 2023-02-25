@@ -102,7 +102,7 @@ class script(object):
 • /id - <code>get id of a specifed user.</code>
 • /info  - <code>get information about a user.</code>"""
 
-    EXTRAMOD_TXT = """<u><b>Telegraph etc acbk<\b><\u>"""
+    EXTRAMOD_TXT = """<u><b>Telegraph etc acbk</b></u>"""
 
     ADMIN_TXT = """<b>ɴᴏᴛᴇ:</b>
 <code>Tʜɪs Mᴏᴅᴜʟᴇ Oɴʟʏ Wᴏʀᴋs Fᴏʀ Mʏ Aᴅᴍɪɴs</code>
