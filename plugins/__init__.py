@@ -14,4 +14,4 @@ async def web_server():
 
 __repo__ = "https://github.com/looser88/PROFESSOR-URLBOT"
 __license__ = "GNU GENERAL PUBLIC LICENSE V2"
-__copyright__ = "Copyright (C) 2023-present MrMKN <https://github.com/MrMKN>"
+__copyright__ = "Copyright (C) 2023-present looser88 <https://github.com/looser88>"
