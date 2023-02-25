@@ -91,27 +91,18 @@ class script(object):
 
     AM_IMDB = """Help: <b>IMDB</b>
 
-<b>Commands and Usage:</b>• /imdb  - <code>get the film information from IMDb source.</code>
-
+<b>Commands and Usage:</b>
+• /imdb  - <code>get the film information from IMDb source.</code>
 • /search  - <code>get the film information from various sources.</code>
 """
 
     AM_MISC = """Help: <b>User Info</b>
 
 <b>Commands and Usage:</b>
-• /id - <code>ɢᴇᴛ ɪᴅ ᴏꜰ ᴀ ꜱᴘᴇᴄɪꜰɪᴇᴅ ᴜꜱᴇʀ.</code>
-• /info  - <code>ɢᴇᴛ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴀ ᴜꜱᴇʀ.</code>
-
-    EXTRAMOD_TXT = """Help: <b>Extra Modules</b>
-
-<b>NOTE:</b>
-these are the extra features of this bot
-
-<b>Commands and Usage:</b>
 • /id - <code>get id of a specifed user.</code>
-• /info  - <code>get information about a user.</code>
-• /imdb  - <code>get the film information from IMDb source.</code>
-• /search  - <code>get the film information from various sources.</code>"""
+• /info  - <code>get information about a user.</code>"""
+
+    EXTRAMOD_TXT = """<u><b>Telegraph etc acbk<\b><\u>"""
 
     ADMIN_TXT = """<b>ɴᴏᴛᴇ:</b>
 <code>Tʜɪs Mᴏᴅᴜʟᴇ Oɴʟʏ Wᴏʀᴋs Fᴏʀ Mʏ Aᴅᴍɪɴs</code>
