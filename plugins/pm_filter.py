@@ -110,7 +110,7 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
             **locals()
         )
     else:
-        cap = f"Here is what i found for your query ☛ `{search}`"
+        cap = f"Here is what i found for your query\n movie name ☛ `{search}`\nRequested by \n This message will be AUTO-DELETED after 5 minutes"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
