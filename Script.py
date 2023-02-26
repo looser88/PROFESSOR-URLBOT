@@ -93,8 +93,7 @@ class script(object):
 
 <b>Commands and Usage:</b>
 • /imdb  - <code>get the film information from IMDb source.</code>
-• /search  - <code>get the film information from various sources.</code>
-"""
+• /search  - <code>get the film information from various sources.</code>"""
 
     AM_MISC = """Help: <b>User Info</b>
 
