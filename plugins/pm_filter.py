@@ -58,6 +58,19 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
         else:
             btn = [[InlineKeyboardButton(text=f"{file.file_name}", callback_data=f'{pre}#{req}#{file.file_id}'),
                     InlineKeyboardButton(text=f"{get_size(file.file_size)}", callback_data=f'{pre}#{file.file_id}')] for file in files ]    
+       btn.insert(0, 
+        [
+            InlineKeyboardButton("🔮Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ🔮", url=f"https://t.me/firelinksguide")
+        ]
+    )
+    btn.insert(1, 
+         [
+             InlineKeyboardButton('Iᴍᴅʙ', url=f"https://imdb.com/find?q={search}"),
+             InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
+             InlineKeyboardButton(f'sᴇʀɪᴇs', 'sinfo')
+             
+         ]
+    )
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
         temp.PM_BUTTONS[key] = search
