@@ -65,6 +65,7 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
     )
     btn.insert(1, 
          [
+             InlineKeyboardButton("Gᴏᴏɢʟᴇ", url=f"https://www.google.com/search?q={search}")
              InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
              InlineKeyboardButton(f'sᴇʀɪᴇs', 'sinfo')
              
